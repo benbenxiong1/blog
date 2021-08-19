@@ -24,8 +24,8 @@
                 <div class="layui-form-item">
                     <label class="layadmin-user-login-icon layui-icon layui-icon-username"
                            for="LAY-user-login-username"></label>
-                    <input type="text" name="email" id="LAY-user-login-username" lay-verify="required|email"
-                           placeholder="登录邮箱" class="layui-input">
+                    <input type="text" name="name" id="LAY-user-login-username" lay-verify="required"
+                           placeholder="用户名" class="layui-input">
                 </div>
                 <div class="layui-form-item">
                     <label class="layadmin-user-login-icon layui-icon layui-icon-password"

@@ -9,10 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace App\Http\Controllers\Admin;
+namespace Admin\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Models\Users;
+use App\Models\Users;
 use App\Library\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
