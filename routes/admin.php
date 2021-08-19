@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/register','AdminController@register')->name('admin.register');
+Route::post('/login','AdminController@login')->name('admin.login');
+
