@@ -1,15 +1,7 @@
 <?php
 
-/*
- * This file is part of the gedongdong/laravel_rbac_permission.
- *
- * (c) gedongdong <gedongdong2010@163.com>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
-
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Default Broadcaster
@@ -37,6 +29,7 @@ return [
     */
 
     'connections' => [
+
         'pusher' => [
             'driver' => 'pusher',
             'key' => env('PUSHER_APP_KEY'),
@@ -44,7 +37,7 @@ return [
             'app_id' => env('PUSHER_APP_ID'),
             'options' => [
                 'cluster' => env('PUSHER_APP_CLUSTER'),
-                'encrypted' => true,
+                'useTLS' => true,
             ],
         ],
 
@@ -60,5 +53,7 @@ return [
         'null' => [
             'driver' => 'null',
         ],
+
     ],
+
 ];

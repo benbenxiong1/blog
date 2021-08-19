@@ -1,12 +1,10 @@
 <?php
 
-/*
- * This file is part of the gedongdong/laravel_rbac_permission.
+/**
+ * Laravel - A PHP Framework For Web Artisans
  *
- * (c) gedongdong <gedongdong2010@163.com>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * @package  Laravel
+ * @author   Taylor Otwell <taylor@laravel.com>
  */
 
 define('LARAVEL_START', microtime(true));
