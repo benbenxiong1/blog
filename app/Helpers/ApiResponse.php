@@ -1,7 +1,8 @@
 <?php
 namespace App\Helpers;
+
+use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpFoundation\Response as FoundationResponse;
-use Illuminate\Http\Response;
 
 trait ApiResponse
 {
@@ -37,7 +38,7 @@ trait ApiResponse
     public function respond($data, $header = [])
     {
 
-        return Response::json($data,$this->getStatusCode(),$header);
+        return Response::json($data,FoundationResponse::HTTP_OK,$header);
     }
 
     /**
@@ -97,7 +98,7 @@ trait ApiResponse
      */
     public function internalError($message = "Internal Error!"){
 
-        return $this->failed($message,FoundationResponse::HTTP_INTERNAL_SERVER_ERROR);
+        return $this->error($message,FoundationResponse::HTTP_INTERNAL_SERVER_ERROR);
     }
 
     /**
@@ -127,6 +128,6 @@ trait ApiResponse
      */
     public function notFond($message = 'Not Fond!')
     {
-        return $this->failed($message,Foundationresponse::HTTP_NOT_FOUND);
+        return $this->error($message,Foundationresponse::HTTP_NOT_FOUND);
     }
 }

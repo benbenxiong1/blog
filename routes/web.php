@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('web.index.index');
 });
+
+Route::get('/index',"IndexController@index");
