@@ -4,10 +4,18 @@
 namespace Web\Controllers;
 
 
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\DB;
+
 class IndexController extends Controller
 {
     public function index()
     {
+        $time = "2021-07-22T01:10:00.000+00:00";
+
+        echo substr($time,0,10);
+
+        die;
 //        phpinfo();
 //        die;
 //
@@ -28,4 +36,7 @@ class IndexController extends Controller
 
 //        \WxworkFinanceSdk::decryptData($randomKey, $encryptStr);
     }
+
+
+
 }

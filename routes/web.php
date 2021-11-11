@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
+    dd($simpleFilters = [
+        'id', // where('id', 'query')
+        'slug' => ['like', '?%'], // where('slug', 'like', 'query%')
+        'name' => ['like', '?%'],
+        'http_path' => ['like', '%?%'], // where('http_path', 'like', '%query%')
+    ]);
     return view('web.index.index');
 });
 
 Route::get('/index',"IndexController@index");
+Route::get('/demo',"IndexController@demo");

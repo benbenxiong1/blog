@@ -11,7 +11,6 @@ class AuthController extends Controller
 {
     public function login(UserLoginRequest $request)
     {
-//        return $request->all();
         $token = Auth::guard($this->guard)->attempt($request->all());
         if(!$token){
             return $this->error('账号或密码错误',401);
@@ -26,4 +25,3 @@ class AuthController extends Controller
     }
 }
 
-./configure --with-php-config=$INSTALL_PHP_PATH/php-config --with-wxwork-finance-sdk=$WXWORK_FINANCE_C_SDK_PATH

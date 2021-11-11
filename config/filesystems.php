@@ -55,6 +55,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'upload' => [
+            'driver' => 'local',
+            'root' => public_path('/uploads'),
+            'url' => env('APP_URL').'/uploads',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
@@ -63,6 +70,30 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
+        ],
+
+        'qiniu' => [
+
+            'driver'  => 'qiniu',
+
+            'domains' => [
+
+                'default'   => env('QINIU_URL'), //你的七牛域名
+
+                'https'     => 'xxxxx',         //你的HTTPS域名
+
+                'custom'    => 'xxxxx',     //你的自定义域名
+
+            ],
+
+            'access_key'=> env('QINIU_ACCESS_KEY'),  //AccessKey
+
+            'secret_key'=> env('QINIU_SECRET_KEY'),  //SecretKey
+
+            'bucket'    => env('QINIU_BUCKET'),  //Bucket名字
+
+            'notify_url'=> '',  //持久化处理回调地址
+
         ],
 
     ],

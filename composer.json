@@ -10,11 +10,14 @@
     "require": {
         "php": "^7.2.5|^8.0",
         "fideloper/proxy": "^4.4",
+        "guzzlehttp/guzzle": "~6.0",
         "laravel/framework": "^6.20.26",
         "laravel/tinker": "^2.5",
+        "maatwebsite/excel": "^3.1",
         "medz/cors": "^1.5",
         "spatie/laravel-permission": "^4.3",
-        "tymon/jwt-auth": "^1.0"
+        "tymon/jwt-auth": "^1.0",
+        "zgldh/qiniu-laravel-storage": "^0.10.4"
     },
     "require-dev": {
         "facade/ignition": "^1.16.15",
